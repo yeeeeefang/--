@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var score=88;
+        var score = prompt("請輸入1-100之間的分數:");
+        function getGrade(score) {
+            if (isNaN(score) ||score < 0 || score > 100) {
+                return "err!分數範圍 0-100";
+            } else if (score >= 80) {
+                return "等級 A";
+            } else if (score >= 60) {
+                return "等級 C";
+            } else {
+                return "等級 D";
+            }
+        }
+        console.log(getGrade(score));
+
+
+
+
+
+        //
+    </script>
+</body>
+
+</html>

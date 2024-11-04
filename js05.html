@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<input type="button" id="btn" value="請點我">
+<body>
+    <!-- 產生五個不同值的數，並排序後找最大最小值 -->
+    <script>
+        document.getElementById('btn').onclick = function () {funA(); }
+
+        function funA() {
+            var min = 1;
+            var max = 100;
+            var a1 = [];
+            while (a1.length < 5) {
+                var n = Math.floor(Math.random() * max) + min;
+                // console.log(n);
+                if(a1.includes(n)===false){
+                    a1.push(n);
+                }else{
+                    n= Math.floor(Math.random() * max) + min;
+                }
+            }
+            document.write(`排序前:${a1}`);
+            document.write('<br>');
+            a1.sort((a, b) => a-b);
+
+            document.write(`排序後:${a1}`); 
+            document.write('<br>');
+            document.write(`最大值:${a1[4]}`);
+            document.write('<br>');
+            document.write(`最小值:${a1[0]}`);
+        }
+    </script>
+</body>
+
+</html>
